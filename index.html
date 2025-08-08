@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculadora Interés Compuesto</title>
+  </head>
+  <body>
+    <main>
+      <h1>Calculadora Interés Compuesto</h1>
+        <div class="container">
+            <form id="compound-interest-calculator">
+                <div>
+                   <label for="principal">Capital Inicial</label>
+                    <input type="number" id="principal" placeholder="Capital Inicial" required /> 
+                </div>
+                            
+                <div>
+                    <label for="rate">Tasa de Interés (%)</label>
+                    <input type="number" id="interest-rate" placeholder="Tasa de Interés (%)" required />
+                </div>
+
+                <div>
+                    <label for="time">Tiempo (años)</label>
+                    <input type="number" id="time" placeholder="Tiempo (años)" required min="1" />
+                </div>      
+                
+                <div>
+                    <label for="time">Tiempo (meses)</label>
+                    <select id="time-months">
+                        <option value="0"></option>
+                        <option value="0.0833">1</option>    
+                        <option value="0.1667">2</option>
+                        <option value="0.25">3</option>
+                        <option value="0.3333">4</option>
+                        <option value="0.4167">5</option>
+                        <option value="0.5">6</option>
+                        <option value="0.5833">7</option>
+                        <option value="0.6667">8</option>
+                        <option value="0.75">9</option>
+                        <option value="0.8333">10</option>
+                        <option value="0.9167">11</option>
+                        <option value="1">12</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="compound-frequency">Frecuencia de Capitalización</label>
+                    <select id="compound-frequency" required>
+                        <option value="1">Anual</option>
+                        <option value="2">Semestral</option>
+                        <option value="4">Trimestral</option>
+                        <option value="12">Mensual</option>
+                        <option value="365" selected>Diaria</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="final-amount">Monto Final</label>
+                    <input type="number" id="final-amount" disabled />
+                </div>
+
+                <div class="controls">
+                    <button type="button" id="calculate">Calcular</button>
+                    <button type="button" id="clear">Limpiar</button>
+                    <button type="button" id="test" hidden>TEST</button>
+                </div>
+                
+            </form>
+        
+        </div>
+    </main>
+    <script src="./script.js"></script>
+    </body>
+</html>
+          
